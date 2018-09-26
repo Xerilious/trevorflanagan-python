@@ -1,6 +1,3 @@
 def main():
-    theGrade()
-
-
-theGrade():
-if 9, 
+    print('something')
+main()
