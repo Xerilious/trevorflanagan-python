@@ -1,26 +1,33 @@
 def mainFunction():
-    #schoolsubject()
-    #yearsInSchool()
-    #gradeAndCity()
-    #randomNum()
-    #boxArea()
-    boxPeri()
+    print('Begin')
+    schoolsubject()
+    yearsInSchool()
+    MyCity = input('Where Are You From? - ')
+    gradeInSchool = input('How Many Years Have You Been In School? - ')
+    gradeAndCity(MyCity, int(gradeInSchool))
+    num1 = input('Type In Start - ')
+    num2 = input('Type In End - ')
+    randomNum(num1, num2)
+    length = input('Type In Length - ')
+    width = input('Type In Width - ')
+    calculatedArea = boxArea(length, width)
+    print('The Area Is ' + str(calculatedArea))
+    Length = int(input('Type In Length - '))
+    Width = int(input('Type In Width - '))
+    calculatedPerimeter = boxPeri(Length, Width)
+    print('The Perimeter Is - ' + str(calculatedPerimeter))
 
 
 def schoolsubject():
     print('Bellarmine Prep')
     print('Favorite Subject Is Python')
-#schoolsubject()
 
 
-def yearsInSchool(grade):
-    grade=int(grade)
+def yearsInSchool():
+    myGrade = input('Enter Your Grade - ')
+    myGrade = int(myGrade)+1
+    print('Your Years In School Are - ' + str(myGrade))
 
-
-myGrade = input('Enter Your Grade - ')
-myGrade = int(myGrade)+1
-print('Your Years In School Are - ' + str(myGrade))
-yearsInSchool(grade=myGrade)
 
 def gradeAndCity(city, grade):
     x = grade - 1
@@ -28,33 +35,22 @@ def gradeAndCity(city, grade):
     print('You Are In ' + str(x) + 'th Grade')
 
 
-MyCity = input('Where Are You From? - ')
-MyGrade = input('How Many Years Have You Been In School? - ')
-gradeAndCity(MyCity, int(MyGrade))
-
 from random import*
 
-def randomNum():
-    num1 = input('Type In Start - ')
-    num2 = input('Type In End - ')
-    myNumber = randint(int(num1), int(num2))
+def randomNum(numA, numB):
+    myNumber = randint(int(numA), int(numB))
     print(myNumber)
-    return (myNumber)
-randomNum()
 
 
-def boxArea():
-    length = input('Type In Length - ')
-    width = input('Type In Width - ')
-    area = int(length) * int(width)
-    print('The Area Is ' + str(area))
+def boxArea(Len, Wid):
+    area = int(Len) * int(Wid)
     return (area)
-boxArea()
 
 
-def boxPeri():
-    length = input('Type In Length - ')
-    width = input('Type In Width - ')
-    perimeter = int(length * 2) + int(width * 2)
-    return ('The Perimeter Is - ' + perimeter)
-boxPeri()
+def boxPeri(len, wid):
+    perimeter = (len * 2) + (wid * 2)
+    perimeter = str(perimeter)
+    return (perimeter)
+
+
+mainFunction()
