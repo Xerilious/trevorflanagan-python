@@ -1,9 +1,9 @@
 def main():
     longYear()
-    num1 = [50, 70, 50.3, 20.7]
+    num1 = [90, 70, 98, 97]
     num2 = len(num1)
-    print(num1)
     answer = numGradeList(num1, num2)
+    print(answer)
     process = gradeCheck(answer)
     gradeResponse(process)
 
@@ -27,24 +27,22 @@ def numGradeList(myNum1, myNum2):
 
 def gradeCheck(gradeAvg):
     if gradeAvg >= 90:
-        print('A')
+        print('You Have An A')
     elif gradeAvg >= 80:
-        print('B')
+        print('You Have A B')
     elif gradeAvg >= 70:
-        print('C')
+        print('You Have A C')
     else:
-        print('Uh Oh')
-    return gradeCheck
+        return ('Uh Oh')
+    return gradeAvg
 
 
 def gradeResponse(gradeCheck):
-    print(gradeCheck)
-    if gradeCheck == 'A' or 'B' or 'C':
-        print('You Are Passing!')
-    else:
+    if gradeCheck == ('Uh Oh'):
         print('Start Working!')
-    return gradeCheck
-
+        input('pause')
+    else:
+        print('You Are Passing!')
 
 
 main()
