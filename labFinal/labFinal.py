@@ -1,8 +1,7 @@
 def main():
     longYear()
-    num1 = [90, 70, 98, 97]
-    num2 = len(num1)
-    answer = numGradeList(num1, num2)
+    num1 = [23, 70, 69, 53]
+    answer = numGradeList(num1)
     print(answer)
     process = gradeCheck(answer)
     gradeResponse(process)
@@ -20,9 +19,13 @@ def longYear():
     else:
         print('You Should Not Be Here')
 
-def numGradeList(myNum1, myNum2):
-    gradeAvg = (myNum1[0] + myNum1[1] + myNum1[2] + myNum1[3])/myNum2
-    return gradeAvg
+def numGradeList(myNum1):
+    average = 0
+    for x in range(len(myNum1)):
+        average += float(myNum1[x])
+
+    #gradeAvg = (myNum1[0] + myNum1[1] + myNum1[2] + myNum1[3])/myNum2
+    return average / len(myNum1)
 
 
 def gradeCheck(gradeAvg):
