@@ -1,8 +1,9 @@
 def main():
     srg = input('Enter Sentence - ')
     print(deVowel(srg))
-
-    mathStuff()
+    stuffList = [10, 20, 30, 40]
+    multNum = int(input('Multiply By - '))
+    print(mathStuff(stuffList, multNum))
 
 
 def deVowel(srg):
@@ -15,10 +16,9 @@ def deVowel(srg):
 
 
 def mathStuff(stuffList, multNum):
-    stuffList == [10, 20, 30, 40]
-    multNum == input('Multiply By - ')
-    return 
-
+    for x in range (len(stuffList)):
+        stuffList[x] *= multNum
+    return stuffList
 
 
 main()
