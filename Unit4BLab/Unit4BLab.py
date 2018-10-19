@@ -12,8 +12,8 @@ def forLoopPrac(loopList):
 
 def loopWithRange():
     rangeList = [10, 20, 30, 40, 50]
-    for x in range(0, 3):
-            print(rangeList[x])
+    for x in rangeList:
+            print(x, '* 10 =', (x * 10))
 
 
 
