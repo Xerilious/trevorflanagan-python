@@ -1,8 +1,17 @@
 from random import *
 
+
 def mainFunc():
     roll = rollDice()
-    printDice(roll)
+    answer = printDice(roll)
+    blowOnTheDice = input('Blow On The Dice?')
+    while blowOnTheDice == 'of course!':
+        roll = rollDice()
+        printDice(roll)
+        input('Again?')
+        if not 'of course!':
+            end()
+        return blowOnTheDice
 
 
 def rollDice():
@@ -13,12 +22,12 @@ def rollDice():
 
 def printDice(answer):
     diceOne = ('|     |\n|  @  |\n|     |')
-    diceTwo = ['|@    |', '|     |', '|    @|']
-    diceThree = ['|@    |', '|  @  |', '|    @|']
-    diceFour = ['|@   @|', '|     |', '|@   @|']
-    diceFive = ['|@   @|', '|  @  |', '|@   @|']
-    diceSix = ['|@   @|', '|@   @|', '|@   @|']
-    endLine = (' ~~~~')
+    diceTwo = ('|@    |\n|     |\n|    @|')
+    diceThree = ('|@    |\n|  @  |\n|    @|')
+    diceFour = ('|@   @|\n|     |\n|@   @|')
+    diceFive = ('|@   @|\n|  @  |\n|@   @|')
+    diceSix = ('|@   @|\n|@   @|\n|@   @|')
+    endLine = ('  ~~~~')
     print(endLine)
     if answer == 1:
         print(diceOne)
@@ -33,8 +42,16 @@ def printDice(answer):
     if answer == 6:
         print(diceSix)
     print(endLine)
+    return printDice(answer)
 
-# def finalFunc():
-#     input('Once More?')
-#     if
+
+def end(blowOnTheDice):
+    if blowOnTheDice == 'of course!':
+
+        #mainFunc()
+    elif not blowOnTheDice == 'of course!':
+        mainFunc()
+
+
+
 mainFunc()
