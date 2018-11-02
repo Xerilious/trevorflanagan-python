@@ -2,21 +2,17 @@ from random import *
 
 
 def mainFunc():
-    roll = rollDice()
-    answer = printDice(roll)
     blowOnTheDice = input('Blow On The Dice?')
-    while blowOnTheDice == 'of course!':
-        roll = rollDice()
-        printDice(roll)
-        input('Again?')
-        if not 'of course!':
-            end()
-        return blowOnTheDice
+    roll = rollDice()
+    printDice(roll)
+    if blowOnTheDice == 'Y':
+        mainFunc()
+
+
 
 
 def rollDice():
     x = randint(1, 6)
-    input('Snake Eyes!')
     return x
 
 
@@ -42,16 +38,6 @@ def printDice(answer):
     if answer == 6:
         print(diceSix)
     print(endLine)
-    return printDice(answer)
-
-
-def end(blowOnTheDice):
-    if blowOnTheDice == 'of course!':
-
-        #mainFunc()
-    elif not blowOnTheDice == 'of course!':
-        mainFunc()
-
 
 
 mainFunc()
