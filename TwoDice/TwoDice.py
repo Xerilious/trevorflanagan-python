@@ -4,15 +4,21 @@ ROLLNUM = 2
 
 def mainFunc():
     setOfDice = [0] * 6
-    #setOfDice = defineDice(num)
-    num = findDice()
-    defineDice(num)
-    setOfDice = defineDice(num)
-    print(num)
-    sideBySide()
+    setOfDice = defineDice()
+    print(setOfDice)
+    sideBySide(setOfDice)
+    snake = [0] * ROLLNUM
+    play = input('Play? - ')
+    while play == 'y':
+        for i in range(0, ROLLNUM):
+            num = findDice()
+            snake[i] = setOfDice[num]
+        sideBySide(snake)
+        play = input('Play? - ')
 
 
-def defineDice(num):
+
+def defineDice():
     dice = [0] * 6
     topBottom = ' ~~~~~ '
     leftOne =   '|@    |'
@@ -23,34 +29,32 @@ def defineDice(num):
     for num in range(0, 6):
         if num == 0:
             dice[num] = [topBottom, emptyOne, middleOne, emptyOne, topBottom]
-        elif dice[num] == 1:
+        elif num == 1:
             dice[num] = [topBottom, leftOne, emptyOne, rightOne, topBottom]
-        elif dice[num] == 2:
+        elif num == 2:
             dice[num] = [topBottom, leftOne, middleOne, rightOne, topBottom]
-        elif dice[num] == 3:
+        elif num == 3:
             dice[num] = [topBottom, aCouple, emptyOne, aCouple, topBottom]
-        elif dice[num] == 4:
+        elif num == 4:
             dice[num] = [topBottom, leftOne, emptyOne, rightOne, topBottom]
         else:
             dice[num] = [topBottom, aCouple, aCouple, aCouple, topBottom]
-    print(dice)
 
     return dice
 
 
 
 def findDice():
-    num = randint(1, 6)
+    num = randint(0, 5)
     return num
 
 
-def sideBySide():
-    game = 0
-    while input('Play?'):
-        for x in range(0, 1):
-            game = game + 1
-            print('game - ' + str(game))
-
+def sideBySide(diceSet):
+    print('sidebyside')
+    for row in range(0, len(diceSet[0])):
+        for col in range(0, len(diceSet)):
+            print(diceSet[col][row], end='\t')
+        print()
 
 
 mainFunc()
