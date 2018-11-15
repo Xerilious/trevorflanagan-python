@@ -1,6 +1,7 @@
 import turtle
 pen = turtle.Pen()
 angle = 90
+pen.speed(0)
 def mainFunc():
     squareDrawing(angle)
     rectangleDrawing(angle)
