@@ -4,6 +4,7 @@ angle = 90
 def mainFunc():
     squareDrawing(angle)
     rectangleDrawing(angle)
+    circleThing()
 
 def squareDrawing(angle):
     pen.pencolor("red")
@@ -45,6 +46,13 @@ def rectangleDrawing(angle):
     pen.forward(100)
 
 
+def circleThing():
+    pen.penup()
+    pen.right(55)
+    pen.back(350)
+    pen.pendown()
+    pen.pencolor('pink')
+    pen.circle(300)
 
 mainFunc()
 turtle.exitonclick()
