@@ -7,6 +7,7 @@ def mainFunc():
     circleThing()
 
 def squareDrawing(angle):
+    turtle.bgcolor("#28ff74")
     pen.pencolor("red")
     for x in range(0, 4):
         pen.forward(angle)
@@ -14,13 +15,16 @@ def squareDrawing(angle):
     pen.penup()
     pen.setx(100)
     pen.pendown()
+    turtle.bgcolor("#8240ff")
     for x in range(0, 4):
         pen.pencolor('blue')
         pen.forward(100)
         pen.right(angle)
 
 
+
 def rectangleDrawing(angle):
+    turtle.bgcolor("#f735f2")
     pen.pencolor('green')
     pen.penup()
     pen.setx(-200)
@@ -36,7 +40,7 @@ def rectangleDrawing(angle):
     pen.penup()
     pen.sety(200)
     pen.pendown()
-    pen.pencolor('yellow')
+    pen.pencolor("#ff8732")
     pen.forward(150)
     pen.left(angle)
     pen.forward(100)
@@ -47,12 +51,14 @@ def rectangleDrawing(angle):
 
 
 def circleThing():
+    turtle.bgcolor("#796ff0")
     pen.penup()
     pen.right(55)
     pen.back(350)
     pen.pendown()
     pen.pencolor('pink')
-    pen.circle(300)
+    pen.circle(50)
+
 
 mainFunc()
 turtle.exitonclick()
