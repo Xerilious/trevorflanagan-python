@@ -15,8 +15,10 @@ def lineFunc():
     pen.setx(-50)
     pen.forward(100)
     turtle.bgcolor("#ff7648")
+    pen.pencolor('red')
 
 def squareFunc(squareAngle):
+    turtle.bgcolor('#7480ff')
     pen.setx(0)
     pen.sety(0)
     pen.penup()
@@ -27,10 +29,11 @@ def squareFunc(squareAngle):
     for x in range(0, 4):
         pen.right(squareAngle)
         pen.forward(200)
-    turtle.pencolor("#ff3795")
+    pen.pencolor("#ff3795")
 
 
 def circleThingy():
+    pen.pencolor('#f9984f')
     turtle.bgcolor("#736ff6")
     pen.penup()
     pen.setpos(-300, 0)
