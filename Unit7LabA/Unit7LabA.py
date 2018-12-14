@@ -22,10 +22,10 @@ class petClass:
         print(petClass)
 
 class cageClass:
-    cageClass = 'Caged Pet'
+    cageType = 'Caged Pet'
 
     def __init__(self, vType, vName, vBreed):
-        self.type = 
+        self.type =
         self.name = vName
         self.breed = vBreed
     def dangerThingy(self):
