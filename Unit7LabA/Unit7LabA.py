@@ -1,5 +1,4 @@
 def mainFunc():
-    print('Gaaaddd Daaammmmiiittt!')
     myPet1 = petClass('Dog', 'Rocky', 'German Shepard')
     print(myPet1.name)
     print(myPet1.type)
@@ -8,6 +7,10 @@ def mainFunc():
     print(myPet2.name)
     print(myPet2.type)
     myPet2.whatIsIt()
+    myCage1 = cageClass('snake')
+    myCage1.whatDanger()
+    myCage2 = cageClass('rat')
+    myCage2.whatDanger()
 
 
 
@@ -21,27 +24,21 @@ class petClass:
         self.breed = vBreed
 
     def whatIsIt(self):
-        print('My pet is a ' + self.type + ', his name is ' + self.name + ', and he is a '+ self.breed)
+        print('My pet is a ' + self.type + ', his name is ' + self.name + ', and he is a ' + self.breed)
 
 class cageClass:
     cageType = 'Caged Pet'
 
-    def __init__(self, vType, vName, vBreed):
+    def __init__(self, vType):
         self.type =vType
-        self.name = vName
-        self.breed = vBreed
+
 
     def whatDanger(self):
-        pass
-
-
-
-
-
-
-
-
-
+        if self.type == 'snake':
+            print('here')
+            print('My pet is a ' + self.type + ' and he is ' + 'dangerous')
+        if self.type == 'rat':
+            print('My pet is a ' + self.type + ' and he is ' + 'not dangerous')
 
 
 mainFunc()
