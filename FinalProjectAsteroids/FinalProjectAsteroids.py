@@ -30,9 +30,12 @@ def instructionSheet():
     pen1.write('-Use Arrow Keys to Move On X and Y Axis', font=('Arial', 16, 'normal'))
     pen1.up()
     pen1.goto(-275, 200)
-    pen1.write('-Use q, w, a, and s For Diagonal Movement', font=('Arial', 16, 'normal'))
-
-
+    pen1.down()
+    pen1.write('-Use s, d, a, and f For Diagonal Movement', font=('Arial', 16, 'normal'))
+    pen1.up()
+    pen1.goto(-275, 175)
+    pen1.down()
+    pen1.write('-Draw Something Before Time Runs Out!', font=('Arial', 16, 'normal'))
 
 
 def upFunc():
@@ -101,11 +104,10 @@ wn.onkey(upFunc, "Up")
 wn.onkey(downFunc, "Down")
 wn.onkey(leftFunc, "Left")
 wn.onkey(rightFunc, "Right")
-wn.onkey(downLeft, "a")
-wn.onkey(downRight, "s")
-wn.onkey(upLeft, "q")
-wn.onkey(upRight, "w")
+wn.onkey(downLeft, "s")
+wn.onkey(downRight, "d")
+wn.onkey(upLeft, "a")
+wn.onkey(upRight, "f")
 wn.listen()
 mainFunc()
 update()
-#turtle.exitonclick
