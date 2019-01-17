@@ -1,6 +1,7 @@
 #Etch-A-Sketch!
 import turtle
 import random
+import sys
 pen = turtle.Pen()
 pen1 = turtle.Pen()
 pen.speed(0)
@@ -8,7 +9,9 @@ wn = turtle.Screen()
 running = True
 
 
+
 def mainFunc():
+    difficultyFunc()
     instructionSheet()
     upFunc()
     downFunc()
@@ -92,6 +95,16 @@ def upRight():
     pen.setheading(45)
     pen.down()
     pen.forward(10)
+
+
+def difficultyFunc():
+    x = input('Fun, Tricky, or Torture?')
+    if x == 'Torture':
+        sys.setrecursionlimit(500)
+    if x == 'Tricky':
+        sys.setrecursionlimit(750)
+    elif x == 'Easy':
+        sys.setrecursionlimit(1500)
 
 
 def update():
