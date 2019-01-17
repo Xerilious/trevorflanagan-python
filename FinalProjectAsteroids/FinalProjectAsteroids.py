@@ -98,13 +98,15 @@ def upRight():
 
 
 def difficultyFunc():
-    x = input('Fun, Tricky, or Torture?')
+    x = input('Too Easy, Fun, Tricky, or Torture?')
     if x == 'Torture':
         sys.setrecursionlimit(500)
     if x == 'Tricky':
         sys.setrecursionlimit(750)
-    elif x == 'Easy':
+    if x == 'Fun':
         sys.setrecursionlimit(1500)
+    elif x == 'Too Easy':
+        sys.setrecursionlimit(1750)
 
 
 def update():
